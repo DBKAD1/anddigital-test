@@ -9,7 +9,7 @@ This API enables users to access a database of a phone company and:
 
 ## Installing 
 
-* You can download the [phone](dist.zip) to set up and test the application without building it.
+* You can download the [binary files](dist.zip) to set up and test the application without building it.
 * Extract the contents to a suitable location.
 * Add it as a new .Net framework 4 application to IIS,IIS Express or any suitable web server and run.
 * You test the endpoints using any Rest client, See below for examples.
