@@ -25,7 +25,7 @@ This project was created using the Visual Studio and C#
 You can download this repository or use the git command below to clone it.
 
 ```shell
-git clone https://github.com/your/awesome-project.git
+git clone https://github.com/DBKAD1/anddigital-test.git
 ```
 
 ### Building
@@ -78,8 +78,7 @@ This API is based on am imaginary Database, as a result you can use the values i
 
 ## Links
 
-- Project homepage: https://your.github.com/awesome-project/
-- Repository: https://github.com/your/awesome-project/
+- Project homepage: https://github.com/DBKAD1/anddigital-test
 - Swagger API Contract: [ANDTestSwagger.json](UI/ANDTestSwagger.json)
 
 
