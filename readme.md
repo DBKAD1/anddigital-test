@@ -39,7 +39,7 @@ git clone https://github.com/DBKAD1/anddigital-test.git
 
 * Run the Web API from Visual Studio by hitting the F5 key on your keyboard or using the run button.
 * Set it up as a Web Application in any Web Server of your choice.
-* Ensure the MockData folder is present in the rot folder of the web site.
+* Ensure the MockData folder is present in the rot folder of the website.
 
 ## <a name="testing"></a>Testing
 
