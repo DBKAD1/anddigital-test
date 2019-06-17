@@ -73,7 +73,7 @@ e.g.
 curl -d "" -i -X PUT "http://localhost:121/api/PhoneNumbers/(959)%20743%206829/a3ess82f223"
 ```
 ### Mock Data
-This API is based on am imaginary Database, as a result you can use the values is [customer.json](MockData/Customers.json) for your test.
+This API is based on am imaginary Database, as a result you can use the values is [customer.json](ANDDigitalTest/MockData/Customers.json) for your test.
 
 
 ## Links
