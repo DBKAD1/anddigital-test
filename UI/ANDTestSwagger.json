@@ -1,0 +1,108 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "ANDDigitalTest"
+    },
+    "host": "localhost:52016",
+    "schemes": ["http"],
+    "paths": {
+        "/api/PhoneNumbers/{email}": {
+            "get": {
+                "tags": ["PhoneNumbers"],
+                "summary": "This Action takes the email address of the user and returns all the phone numbers for that user",
+                "operationId": "PhoneNumbers_GetAsync",
+                "consumes": [],
+                "produces": ["application/json", "text/json", "text/html", "application/xml", "text/xml"],
+                "parameters": [{
+                    "name": "email",
+                    "in": "path",
+                    "description": "The email of the user, append a forward slash (/) at the end of this input in the url",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/PhoneNumber"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/PhoneNumbers/{number}/{code}": {
+            "put": {
+                "tags": ["PhoneNumbers"],
+                "summary": "This action takes the phone number and activation code as an input and tries to activate the number",
+                "operationId": "PhoneNumbers_PutAsync",
+                "consumes": [],
+                "produces": ["application/json", "text/json", "text/html", "application/xml", "text/xml"],
+                "parameters": [{
+                    "name": "number",
+                    "in": "path",
+                    "description": "The phone number you want to activated",
+                    "required": true,
+                    "type": "string"
+                }, {
+                    "name": "code",
+                    "in": "path",
+                    "description": "A unique activation code",
+                    "required": true,
+                    "type": "string"
+                }],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/PhoneNumbers": {
+            "get": {
+                "tags": ["PhoneNumbers"],
+                "summary": "This action takes no input and will return a list of all the Phone Numbers in the API",
+                "operationId": "PhoneNumbers_GetAsync",
+                "consumes": [],
+                "produces": ["application/json", "text/json", "text/html", "application/xml", "text/xml"],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/PhoneNumber"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "PhoneNumber": {
+            "type": "object",
+            "properties": {
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Number": {
+                    "type": "string"
+                },
+                "ActivationCode": {
+                    "type": "string"
+                },
+                "IsActivated": {
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}
